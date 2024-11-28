@@ -12,6 +12,25 @@ public class Biblioteca {
         this.books = books;
     }
 
+    public boolean hasAutor(String nif) {
+        for (var book : books) {
+            if (book.hasAuthor(nif)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean hasBook(String isbn){
+        for(var book: books){
+            if(book.getIsbn().equals(isbn)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
     public String getName() {
         return name;
     }

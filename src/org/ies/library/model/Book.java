@@ -4,24 +4,34 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Book {
-    private String ISBN;
+    private String isbn;
     private String titulo;
     private int año;
     private Autor [] autores;
 
+    public boolean hasAuthor(String nif){
+        for(var author: autores){
+            if(author.getNif().equals(nif)){
+
+                return true;
+            }
+        }
+        return false;
+    }
+
     public Book(String ISBN, String titulo, int año, Autor[] autores) {
-        this.ISBN = ISBN;
+        this.isbn = ISBN;
         this.titulo = titulo;
         this.año = año;
         this.autores = autores;
     }
 
-    public String getISBN() {
-        return ISBN;
+    public String getIsbn() {
+        return isbn;
     }
 
-    public void setISBN(String ISBN) {
-        this.ISBN = ISBN;
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
     public String getTitulo() {
@@ -53,18 +63,18 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return año == book.año && Objects.equals(ISBN, book.ISBN) && Objects.equals(titulo, book.titulo) && Objects.deepEquals(autores, book.autores);
+        return año == book.año && Objects.equals(isbn, book.isbn) && Objects.equals(titulo, book.titulo) && Objects.deepEquals(autores, book.autores);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(ISBN, titulo, año, Arrays.hashCode(autores));
+        return Objects.hash(isbn, titulo, año, Arrays.hashCode(autores));
     }
 
     @Override
     public String toString() {
         return "Book{" +
-                "ISBN='" + ISBN + '\'' +
+                "ISBN='" + isbn + '\'' +
                 ", titulo='" + titulo + '\'' +
                 ", año=" + año +
                 ", autores=" + Arrays.toString(autores) +

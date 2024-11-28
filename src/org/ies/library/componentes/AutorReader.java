@@ -19,5 +19,11 @@ public class AutorReader {
 
         System.out.println("apellido : ");
         String surName = scanner.nextLine();
+
+        return new Autor(
+                nif,
+                name,
+                surName
+        );
     }
 }
