@@ -6,12 +6,12 @@ import java.util.Objects;
 public class Book {
     private String isbn;
     private String titulo;
-    private int año;
+    private int year;
     private Autor [] autores;
 
-    public boolean hasAuthor(String nif){
-        for(var author: autores){
-            if(author.getNif().equals(nif)){
+    public boolean hasAutor(String nif){
+        for(var autor: autores){
+            if(autor.getNif().equals(nif)){
 
                 return true;
             }
@@ -19,10 +19,10 @@ public class Book {
         return false;
     }
 
-    public Book(String ISBN, String titulo, int año, Autor[] autores) {
+    public Book(String ISBN, String titulo, int year, Autor[] autores) {
         this.isbn = ISBN;
         this.titulo = titulo;
-        this.año = año;
+        this.year = year;
         this.autores = autores;
     }
 
@@ -42,12 +42,12 @@ public class Book {
         this.titulo = titulo;
     }
 
-    public int getAño() {
-        return año;
+    public int getYear() {
+        return year;
     }
 
-    public void setAño(int año) {
-        this.año = año;
+    public void setYear(int year) {
+        this.year = year;
     }
 
     public Autor[] getAutores() {
@@ -63,12 +63,12 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return año == book.año && Objects.equals(isbn, book.isbn) && Objects.equals(titulo, book.titulo) && Objects.deepEquals(autores, book.autores);
+        return year == book.year && Objects.equals(isbn, book.isbn) && Objects.equals(titulo, book.titulo) && Objects.deepEquals(autores, book.autores);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(isbn, titulo, año, Arrays.hashCode(autores));
+        return Objects.hash(isbn, titulo, year, Arrays.hashCode(autores));
     }
 
     @Override
@@ -76,7 +76,7 @@ public class Book {
         return "Book{" +
                 "ISBN='" + isbn + '\'' +
                 ", titulo='" + titulo + '\'' +
-                ", año=" + año +
+                ", year=" + year +
                 ", autores=" + Arrays.toString(autores) +
                 '}';
     }

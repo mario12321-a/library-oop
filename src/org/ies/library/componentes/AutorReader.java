@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class AutorReader {
     private final Scanner scanner;
+
     public AutorReader(Scanner scanner){
         this.scanner = scanner;
     }

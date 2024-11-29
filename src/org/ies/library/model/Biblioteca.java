@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Biblioteca {
     private String name;
-    private Book [] books;
+    private Book[] books;
 
     public Biblioteca(String name, Book[] books) {
         this.name = name;
@@ -14,22 +14,50 @@ public class Biblioteca {
 
     public boolean hasAutor(String nif) {
         for (var book : books) {
-            if (book.hasAuthor(nif)) {
+            if (book.hasAutor(nif)) {
                 return true;
             }
         }
         return false;
     }
 
-    public boolean hasBook(String isbn){
-        for(var book: books){
-            if(book.getIsbn().equals(isbn)) {
+    public boolean hasBook(String isbn) {
+        for (var book : books) {
+            if (book.getIsbn().equals(isbn)) {
                 return true;
             }
         }
         return false;
     }
-}
+
+    public int countAutorBooks(String autorNif) {
+        int count = 0;
+        for (var book : books) {
+            if (book.hasAutor(autorNif)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public int countYearBooks(int year) {
+        int count = 0;
+        for (var book : books) {
+            if (book.getYear() == year) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public Book findBook(String isbn){
+        for(var book:books){
+            if(book.getIsbn().equals(isbn)){
+                return book;
+            }
+        }
+        return null;
+    }
 
     public String getName() {
         return name;

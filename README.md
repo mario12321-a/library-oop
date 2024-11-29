@@ -23,7 +23,7 @@
     - hasBook(isbn): dado un ISBN devuelve si el libro existe en la biblioteca
     - hasAuthor(authorNif): dado un NIF devuelve si hay algún libro de ese autor
     - countBooks(authroNif):  dado un NIF devuelve el número de libros del autor
-    - countYearBooks(year): dado un año, devuelve el número de libros de ese año.
+    - countYearBooks(year): dado un year, devuelve el número de libros de ese year.
     - findBook(isbn): dado un ISBN, devuelve el libro con ese ISBN. Si no lo encuentra, devuelve null
 
 ## Componentes
