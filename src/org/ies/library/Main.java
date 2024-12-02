@@ -15,6 +15,5 @@ public class Main {
 
         var biblioteca = bibliotecaReader.read();
         System.out.println(biblioteca);
-
     }
 }
