@@ -22,7 +22,7 @@ public class BookReader {
         String titulo = scanner.nextLine();
 
         System.out.println("año de publicacion: ");
-        int año= scanner.nextInt();
+        int year= scanner.nextInt();
         scanner.nextLine();
 
         System.out.println("cuantos autores tiene el libro ");
@@ -33,11 +33,6 @@ public class BookReader {
         for(int i=0; i<autors.length; i++){
             autors[i]= autorReader.read();
         }
-        return new Book(
-                isbn,
-                titulo,
-                año,
-                autors
-        );
+        return new Book(isbn,titulo,year,autors);
     }
 }

@@ -13,6 +13,10 @@ public class Autor {
         this.surName = surName;
     }
 
+    //public void showInfo(){
+        //System.out.println("NIF: " + nif + "Nombre: " + name + "Apellido: " + surName );
+    //}
+
     public String getNif() {
         return nif;
     }

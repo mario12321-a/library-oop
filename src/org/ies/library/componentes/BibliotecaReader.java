@@ -15,7 +15,7 @@ public class BibliotecaReader {
     }
     public Biblioteca read(){
         System.out.println("introduce los datos de la biblioteca ");
-        System.out.println("Nombre ");
+        System.out.println("Nombre de la biblioteca ");
         String name = scanner.nextLine();
 
         System.out.println("cuantos libros tiene la biblioteca ");
